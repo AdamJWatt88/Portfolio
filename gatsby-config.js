@@ -5,7 +5,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-remark-images`,
-    `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
@@ -36,20 +35,10 @@ module.exports = {
         id: "portal",
       },
     },
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        mergeSecurityHeaders: true, // boolean to turn off the default security headers
-        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
-        mergeCachingHeaders: true, // boolean to turn off the default caching headers
-        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-      },
-    },
-    `gatsby-plugin-netlify-cms`,
   ],
   siteMetadata: {
     title: "Hello, my name is",
     author: "Adam Watt",
     description: "I enjoy developing sites and apps for the web.",
   },
-}
+};
