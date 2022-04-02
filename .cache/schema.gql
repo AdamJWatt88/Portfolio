@@ -1,4 +1,4 @@
-### Type definitions saved at 2022-04-02T05:55:37.262Z ###
+### Type definitions saved at 2022-04-02T05:59:53.675Z ###
 
 enum RemoteFileFit {
   COVER
@@ -326,6 +326,40 @@ enum GatsbyImagePlaceholder {
   NONE
 }
 
+type MarkdownHeading {
+  id: String
+  value: String
+  depth: Int
+}
+
+enum MarkdownHeadingLevels {
+  h1
+  h2
+  h3
+  h4
+  h5
+  h6
+}
+
+enum MarkdownExcerptFormats {
+  PLAIN
+  HTML
+  MARKDOWN
+}
+
+type MarkdownWordCount {
+  paragraphs: Int
+  sentences: Int
+  words: Int
+}
+
+type MarkdownRemark implements Node @childOf(mimeTypes: ["text/markdown", "text/x-markdown"], types: ["File"]) @derivedTypes @dontInfer {
+  frontmatter: MarkdownRemarkFrontmatter
+  excerpt: String
+  rawMarkdownBody: String
+  fileAbsolutePath: String
+}
+
 enum ImageFormat {
   NO_CHANGE
   AUTO
@@ -627,40 +661,6 @@ type ImageSharp implements Node @childOf(types: ["File"]) @dontInfer {
   ): JSON!
   original: ImageSharpOriginal
   resize(width: Int, height: Int, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, jpegProgressive: Boolean = true, pngCompressionLevel: Int = 9, pngCompressionSpeed: Int = 4, grayscale: Boolean, duotone: DuotoneGradient, base64: Boolean, traceSVG: Potrace, toFormat: ImageFormat, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int, trim: Float): ImageSharpResize
-}
-
-type MarkdownHeading {
-  id: String
-  value: String
-  depth: Int
-}
-
-enum MarkdownHeadingLevels {
-  h1
-  h2
-  h3
-  h4
-  h5
-  h6
-}
-
-enum MarkdownExcerptFormats {
-  PLAIN
-  HTML
-  MARKDOWN
-}
-
-type MarkdownWordCount {
-  paragraphs: Int
-  sentences: Int
-  words: Int
-}
-
-type MarkdownRemark implements Node @childOf(mimeTypes: ["text/markdown", "text/x-markdown"], types: ["File"]) @derivedTypes @dontInfer {
-  frontmatter: MarkdownRemarkFrontmatter
-  excerpt: String
-  rawMarkdownBody: String
-  fileAbsolutePath: String
 }
 
 type MarkdownRemarkFrontmatter @derivedTypes {

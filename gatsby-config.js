@@ -1,9 +1,9 @@
 module.exports = {
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
     `gatsby-remark-images`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
