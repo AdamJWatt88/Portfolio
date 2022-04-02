@@ -1,0 +1,117 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background-color: $bg-color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include paddingLeftRight($padding-desktop);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
+  margin-bottom: $section-margin-bottom-large;
+
+  //1200px
+  @include respond(tab-land) {
+    @include paddingLeftRight($padding-tab-land);
+  }
+
+  //900px
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  //600px
+  @include respond(phone) {
+    @include paddingLeftRight($padding-phone);
+  }
+
+  &__nav {
+    display: flex;
+    position: absolute;
+    top: toRem(45);
+    right: toRem(45);
+
+    // 600px
+    @include respond(phone) {
+      top: toRem(25);
+      right: toRem(25);
+    }
+
+    &-link {
+      @include fontXLBold40($font-color-primary);
+      text-decoration: none;
+      transition: all 0.3s;
+
+      //900px
+      @include respond(tab-port) {
+        font-size: toRem(32);
+        font-size: toRem(32);
+      }
+    }
+
+    &-link:hover {
+      color: $font-color-secondary;
+    }
+
+    &-link::after {
+      content: "";
+      display: block;
+      height: 5px;
+      width: 100%;
+      background-color: $bg-color-tertiary;
+      border-radius: $border-radius-large;
+      opacity: 0;
+      margin-top: 5px;
+      transition: opacity 0.3s;
+    }
+
+    &-link:hover::after {
+      opacity: 1;
+    }
+  }
+
+  &__nav > :not(:last-child) {
+    margin-right: toRem(15);
+  }
+
+  &__avatar {
+    border-radius: 100%;
+    background-color: $bg-color-tertiary;
+    margin-right: 6.3%;
+
+    //1200px
+    @include respond(tab-land) {
+      margin-right: 3%;
+    }
+
+    //900px
+    @include respond(tab-port) {
+      margin-right: 0px;
+      margin-bottom: toRem(15);
+    }
+  }
+
+  &__content {
+    //900px
+    @include respond(tab-port) {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__content > :not(:last-child) {
+    margin-bottom: toRem(30);
+  }
+
+  &__description,
+  &__header {
+    @include fontLargeBold32($font-color-primary);
+    font-size: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+  }
+
+  &__author {
+    @include fontXLBold40($font-color-primary);
+  }
+}

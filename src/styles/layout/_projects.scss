@@ -1,0 +1,26 @@
+.projects {
+    @include paddingLeftRight($padding-desktop);
+    margin-bottom: $section-margin-bottom-large;
+  
+    // 1200px
+    @include respond(tab-land) {
+      @include paddingLeftRight($padding-tab-land);
+    }
+  
+    // 900px
+    @include respond(tab-port) {
+      @include paddingLeftRight($padding-tab-port);
+    }
+  
+    // 600px
+    @include respond(phone) {
+      @include paddingLeftRight($padding-phone);
+    }
+  
+    &__header {
+      @include headerShadow;
+      font-size: $font-size-clamp-heading-large;
+      text-align: center;
+      margin-bottom: $margin-bottom-large;
+    }
+  }

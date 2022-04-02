@@ -1,0 +1,51 @@
+//* background colors
+$bg-color-primary: #22223b;
+$bg-color-secondary: #4a4e69;
+$bg-color-tertiary: #9a8c98;
+$bg-color-quaternary: #c9ada7;
+$bg-color-body: #f2e9e4;
+
+//* font colors
+$font-color-primary: #f2e9e4;
+$font-color-secondary: #c9ada7;
+$font-color-tertiary: #22223b;
+
+//* border-radius
+$border-radius-large: toRem(20);
+$border-radius-medium: toRem(10);
+$border-radius-small: toRem(5);
+
+//* font-family
+$font-family-primary: Courier New, monospace;
+$font-family-secondary:  monospace;
+
+//* font-size
+// 150px - 50px
+$font-size-clamp-heading-large: clamp(3.1rem, 0.8817rem + 9.4648vw, 9.4rem);
+//125px - 40px
+$font-size-clamp-heading-medium: clamp(2.5rem, 0.6338rem + 7.9624vw, 7.8rem);
+
+//* line-height
+// 140px - 40px
+$line-height-clamp-heading-large: clamp(2.5rem, 0.2993rem + 9.3897vw, 8.75rem);
+// 115px - 40px
+$line-height-clamp-heading-medium: clamp(1.9rem, 0.0408rem + 7.9324vw, 7.18rem);
+
+//* section-margin-bottom
+$section-margin-bottom-large: toRem(300);
+$section-margin-bottom-medium: toRem(60);
+$section-margin-bottom-small: toRem(30);
+
+//* margin-bottom
+$margin-bottom-large: toRem(100);
+$margin-bottom-medium: toRem(50);
+$margin-bottom-small: toRem(25);
+
+//* padding
+$padding-desktop: toRem(150);
+// 1200px
+$padding-tab-land: toRem(100);
+// 900px
+$padding-tab-port: toRem(75);
+//600px
+$padding-phone: toRem(25);

@@ -1,0 +1,76 @@
+.footer {
+  display: flex;
+  align-items: center;
+  clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 100%);
+  background-color: $bg-color-primary;
+  color: $font-color-primary;
+  padding: toRem(45);
+  height: toRem(366);
+
+  // 600px
+  @include respond(phone) {
+    padding: toRem(25);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, .5fr);
+    column-gap: toRem(50);
+
+    // 900px
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+
+        & > *:not(:last-child) {
+            margin-bottom: toRem(25);
+        }
+
+    }
+
+    & h2 {
+      // 40px - 32px
+      font-size: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+    }
+
+    & p {
+        margin-left: toRem(20);
+        // 32px - 16px
+        font-size: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
+      }
+
+  }
+
+  &__email,
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__email {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: end;
+  }
+
+  &__link {
+    color: $font-color-primary;
+    text-decoration: none;
+    grid-column: 2;
+
+    &:not(:last-child){
+        margin-bottom: toRem(25);
+    }
+    
+    &-frontend {
+        grid-row: 2;
+    }
+
+    &-github{
+        grid-row: 3;
+    }
+
+  }
+
+}
