@@ -36,14 +36,18 @@ const loader = new _loader.ProdLoader(_asyncRequires.default, _matchPaths.defaul
 (0, _loader.setLoader)(loader);
 loader.setApiRunner(_apiRunnerBrowser.apiRunner);
 let reactHydrate;
+let reactRender;
 
 if (HAS_REACT_18) {
   const reactDomClient = require(`react-dom/client`);
+
+  reactRender = (Component, el) => reactDomClient.createRoot(el).render(Component);
 
   reactHydrate = (Component, el) => reactDomClient.hydrateRoot(el, Component);
 } else {
   const reactDomClient = require(`react-dom`);
 
+  reactRender = reactDomClient.render;
   reactHydrate = reactDomClient.hydrate;
 }
 
@@ -229,7 +233,16 @@ const reloadStorageKey = `gatsby-reload-compilation-hash-match`;
       return /*#__PURE__*/_react.default.createElement(GatsbyRoot, null, SiteRoot);
     };
 
-    const renderer = (0, _apiRunnerBrowser.apiRunner)(`replaceHydrateFunction`, undefined, reactHydrate)[0];
+    const focusEl = document.getElementById(`gatsby-focus-wrapper`); // Client only pages have any empty body so we just do a normal
+    // render to avoid React complaining about hydration mis-matches.
+
+    let defaultRenderer = reactRender;
+
+    if (focusEl && focusEl.children.length) {
+      defaultRenderer = reactHydrate;
+    }
+
+    const renderer = (0, _apiRunnerBrowser.apiRunner)(`replaceHydrateFunction`, undefined, defaultRenderer)[0];
 
     function runRender() {
       const rootElement = typeof window !== `undefined` ? document.getElementById(`___gatsby`) : null;
