@@ -3,6 +3,16 @@ exports.id = 678;
 exports.ids = [678];
 exports.modules = {
 
+/***/ 4852:
+/***/ ((module) => {
+
+
+
+module.exports = Object.assign;
+//# sourceMappingURL=object-assign.js.map
+
+/***/ }),
+
 /***/ 2369:
 /***/ ((module) => {
 

@@ -3,10 +3,6 @@ var plugins = [{
       plugin: require('/Users/adamwatt/Desktop/JavaScriptProjects/Portfolio/Portfolio-Project/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
-      name: 'gatsby-plugin-react-helmet',
-      plugin: require('/Users/adamwatt/Desktop/JavaScriptProjects/Portfolio/Portfolio-Project/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js'),
-      options: {"plugins":[]},
-    },{
       name: 'gatsby-plugin-portal',
       plugin: require('/Users/adamwatt/Desktop/JavaScriptProjects/Portfolio/Portfolio-Project/node_modules/gatsby-plugin-portal/gatsby-ssr.js'),
       options: {"plugins":[],"key":"portal","id":"portal"},
