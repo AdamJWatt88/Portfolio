@@ -16,8 +16,9 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
+    isBrowser() && window.addEventListener("resize", updateMedia);
+    return () =>
+      isBrowser() && window.removeEventListener("resize", updateMedia);
   });
 
   const closeMenu = () => {
