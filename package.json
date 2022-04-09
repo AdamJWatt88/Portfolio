@@ -13,9 +13,6 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  "engines": {
-    "node": "<=14"
-  },
   "dependencies": {
     "gatsby": "^4.11.1",
     "gatsby-plugin-image": "^2.11.1",
