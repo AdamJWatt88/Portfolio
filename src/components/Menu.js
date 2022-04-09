@@ -1,64 +1,64 @@
-import React, { useRef } from "react"
-import { Link } from "gatsby"
+import React, { useRef } from "react";
+import { Link } from "gatsby";
 
-import HamMenu from "./HamMenu"
-import Modal from "./Modal"
+import HamMenu from "./HamMenu";
+import Modal from "./Modal";
 
 const Menu = () => {
-  const ref = useRef()
-  const ref2 = useRef()
-  const ref3 = useRef()
-  const modalRef = useRef()
+  const isBrowser = () => typeof window !== "undefined";
+
+  const ref = useRef();
+  const ref2 = useRef();
+  const ref3 = useRef();
+  const modalRef = useRef();
 
   const openMenu = () => {
-    document.querySelector("body").classList.add("modal-open")
-    ref.current.classList.add("ham-menu--close")
-    modalRef.current.openModal()
+    isBrowser() && document.querySelector("body").classList.add("modal-open");
+    ref.current.classList.add("ham-menu--close");
+    modalRef.current.openModal();
 
     setTimeout(() => {
-      ref2.current.classList.add("ham-menu--close")
-      ref3.current.classList.add("mobile-nav__sidebar--open")
-    }, 10)
-  }
+      ref2.current.classList.add("ham-menu--close");
+      ref3.current.classList.add("mobile-nav__sidebar--open");
+    }, 10);
+  };
 
   const closeMenu = () => {
-    document.querySelector("body").classList.remove("modal-open")
-    ref3.current.classList.remove("mobile-nav__sidebar--open")
-    ref2.current.classList.remove("ham-menu--close")
-    ref.current.classList.remove("ham-menu--close")
+    isBrowser() &&
+      document.querySelector("body").classList.remove("modal-open");
+    ref3.current.classList.remove("mobile-nav__sidebar--open");
+    ref2.current.classList.remove("ham-menu--close");
+    ref.current.classList.remove("ham-menu--close");
 
     setTimeout(() => {
-      modalRef.current.closeModal()
-    }, 200)
-  }
+      modalRef.current.closeModal();
+    }, 200);
+  };
 
   return (
-    <div className="mobile-nav">
+    <div className='mobile-nav'>
       <HamMenu ref={ref} onClick={openMenu} />
       <Modal ref={modalRef}>
         <HamMenu ref={ref2} onClick={closeMenu} />
-        <aside ref={ref3} className="mobile-nav__sidebar">
+        <aside ref={ref3} className='mobile-nav__sidebar'>
           <nav>
             <ul>
               <Link
-                className="mobile-nav__link"
+                className='mobile-nav__link'
                 onClick={closeMenu}
-                to="#about-me"
-              >
+                to='#about-me'>
                 <li>About Me</li>
               </Link>
               <Link
-                className="mobile-nav__link"
+                className='mobile-nav__link'
                 onClick={closeMenu}
-                to="#projects"
-              >
+                to='#projects'>
                 <li>Projects</li>
               </Link>
               <Link
-                className="mobile-nav__link"
+                className='mobile-nav__link'
                 onClick={closeMenu}
-                to="#footer"
-              >
+                to='#footer'>
                 <li>Contact</li>
               </Link>
             </ul>
@@ -66,7 +66,7 @@ const Menu = () => {
         </aside>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;
