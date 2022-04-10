@@ -137,7 +137,7 @@ const Hero = () => {
       `}
       render={(data) => (
         <header className='hero'>
-          {isDesktop ? renderNav() : <Menu />}
+          {isBrowser() && isDesktop ? renderNav() : <Menu />}
           <StaticImage
             className='hero__avatar'
             src='../../images/avatar/avatar.svg'
