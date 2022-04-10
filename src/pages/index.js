@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import { AboutMe } from "../components/sections/AboutMe";
+import AboutMe from "../components/sections/AboutMe";
 import Footer from "../components/sections/Footer";
 import Hero from "../components/sections/Hero";
 import Projects from "../components/sections/Projects";

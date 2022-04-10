@@ -92,7 +92,7 @@ const Hero = () => {
   );
 
   const updateMedia = () => {
-    setDesktop(isBrowser() && window.innerWidth > 600);
+    isBrowser() && setDesktop(window.innerWidth > 600);
   };
 
   useEffect(() => {
