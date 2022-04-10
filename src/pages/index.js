@@ -1,12 +1,12 @@
-import React, { Fragment } from "react"
+import React, { Fragment } from "react";
 
-import AboutMe from "../components/sections/AboutMe"
-import Footer from "../components/sections/Footer"
-import Hero from "../components/sections/Hero"
-import Projects from "../components/sections/Projects"
-import Skills from "../components/sections/Skills"
+import { AboutMe } from "../components/sections/AboutMe";
+import Footer from "../components/sections/Footer";
+import Hero from "../components/sections/Hero";
+import Projects from "../components/sections/Projects";
+import Skills from "../components/sections/Skills";
 
-import "../styles/index.scss"
+import "../styles/index.scss";
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
       <Projects />
       <Footer />
     </Fragment>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -66,7 +66,7 @@ var gatsby_browser_entry = __webpack_require__(7533);
 //   );
 // };
 // export default AboutMe;
-const AboutMe=()=>{return/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.StaticQuery,{query:"1535203100",render:data=>/*#__PURE__*/index_js_default().createElement("section",{id:"about-me",className:"about-me"},/*#__PURE__*/index_js_default().createElement("h2",{className:"about-me__header"},data.markdownRemark.frontmatter.title),/*#__PURE__*/index_js_default().createElement("div",{className:"about-me__body",dangerouslySetInnerHTML:{__html:data.markdownRemark.html}}))});};/* harmony default export */ const sections_AboutMe = (AboutMe);
+const AboutMe=()=>{return/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.StaticQuery,{query:"1535203100",render:data=>/*#__PURE__*/index_js_default().createElement("section",{id:"about-me",className:"about-me"},/*#__PURE__*/index_js_default().createElement("h2",{className:"about-me__header"},data.markdownRemark.frontmatter.title),/*#__PURE__*/index_js_default().createElement("div",{className:"about-me__body",dangerouslySetInnerHTML:{__html:data.markdownRemark.html}}))});};
 // EXTERNAL MODULE: ./node_modules/common-tags/es/index.js + 41 modules
 var es = __webpack_require__(5863);
 // EXTERNAL MODULE: ./node_modules/gatsby-plugin-image/node_modules/camelcase/index.js
@@ -338,7 +338,7 @@ const Projects=()=>{return/*#__PURE__*/index_js_default().createElement(gatsby_b
 // export default Skills
 const Skills=()=>{return/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.StaticQuery,{query:"548590010",render:data=>/*#__PURE__*/index_js_default().createElement("section",{id:"skills",className:"skills"},/*#__PURE__*/index_js_default().createElement("h3",{className:"skills__heading"},data.markdownRemark.frontmatter.title,/*#__PURE__*/index_js_default().createElement("span",{className:"skills__heading-two"},data.markdownRemark.frontmatter.title2)),/*#__PURE__*/index_js_default().createElement("div",{className:"skills__grid"},data.markdownRemark.frontmatter.skills.map((item,index)=>/*#__PURE__*/index_js_default().createElement("div",{className:"skills__item",key:index},/*#__PURE__*/index_js_default().createElement(Y,{className:"skills__item-icon",image:R(item.icon.childImageSharp.gatsbyImageData),alt:item.skill}),/*#__PURE__*/index_js_default().createElement("h4",{className:"skills__item-skill"},item.skill)))))});};/* harmony default export */ const sections_Skills = (Skills);
 ;// CONCATENATED MODULE: ./src/pages/index.js
-const Home=()=>{return/*#__PURE__*/index_js_default().createElement(index_js_.Fragment,null,/*#__PURE__*/index_js_default().createElement(sections_Hero,null),/*#__PURE__*/index_js_default().createElement(sections_AboutMe,null),/*#__PURE__*/index_js_default().createElement(sections_Skills,null),/*#__PURE__*/index_js_default().createElement(sections_Projects,null),/*#__PURE__*/index_js_default().createElement(sections_Footer,null));};/* harmony default export */ const pages = (Home);
+const Home=()=>{return/*#__PURE__*/index_js_default().createElement(index_js_.Fragment,null,/*#__PURE__*/index_js_default().createElement(sections_Hero,null),/*#__PURE__*/index_js_default().createElement(AboutMe,null),/*#__PURE__*/index_js_default().createElement(sections_Skills,null),/*#__PURE__*/index_js_default().createElement(sections_Projects,null),/*#__PURE__*/index_js_default().createElement(sections_Footer,null));};/* harmony default export */ const pages = (Home);
 
 /***/ }),
 

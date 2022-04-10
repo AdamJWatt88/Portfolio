@@ -33,7 +33,7 @@ import React from "react";
 
 // export default AboutMe;
 
-const AboutMe = () => {
+export const AboutMe = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -60,5 +60,3 @@ const AboutMe = () => {
     />
   );
 };
-
-export default AboutMe;
