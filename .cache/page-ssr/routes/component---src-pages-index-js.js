@@ -222,9 +222,121 @@ const Hero=()=>{const isBrowser=()=>typeof window!=="undefined";const{0:isDeskto
 ;// CONCATENATED MODULE: ./src/components/Project.js
 const Project=({project,html,stack,image,githubLink,projectLink})=>{const isBrowser=()=>typeof window!=="undefined";const{0:isDesktop,1:setDesktop}=(0,index_js_.useState)(isBrowser()&&window.innerWidth<900);const updateMedia=()=>{setDesktop(isBrowser()&&window.innerWidth<900);};(0,index_js_.useEffect)(()=>{window.addEventListener("resize",updateMedia);return()=>window.removeEventListener("resize",updateMedia);},[isDesktop]);const renderBodyLinks=()=>{return/*#__PURE__*/index_js_default().createElement("a",{href:projectLink,className:"project__body"},/*#__PURE__*/index_js_default().createElement("div",{className:"project__body"},/*#__PURE__*/index_js_default().createElement("div",{dangerouslySetInnerHTML:{__html:html}})));};const renderBody=()=>{return/*#__PURE__*/index_js_default().createElement("div",{className:"project__body"},/*#__PURE__*/index_js_default().createElement("div",{dangerouslySetInnerHTML:{__html:html}}));};return/*#__PURE__*/index_js_default().createElement("div",{className:"project"},/*#__PURE__*/index_js_default().createElement("h3",{className:"project__header"},project),/*#__PURE__*/index_js_default().createElement("div",{className:"project__stack"},stack.map((item,index)=>/*#__PURE__*/index_js_default().createElement("div",{key:index,className:"project__stack-item"},"#",item))),/*#__PURE__*/index_js_default().createElement("div",{className:"project__links"},/*#__PURE__*/index_js_default().createElement("a",{href:githubLink,className:"project__link"},/*#__PURE__*/index_js_default().createElement(J,{src:"../images/icons/github.png",alt:"Github",layout:"fixed",__imageData:__webpack_require__(8046)})),/*#__PURE__*/index_js_default().createElement("a",{href:projectLink,className:"project__link"},/*#__PURE__*/index_js_default().createElement(J,{src:"../images/icons/project-link.png",alt:"Project Link",layout:"fixed",__imageData:__webpack_require__(8594)}))),isDesktop?renderBodyLinks():renderBody(),/*#__PURE__*/index_js_default().createElement("a",{href:projectLink,className:"project__image-link"},/*#__PURE__*/index_js_default().createElement(Y,{className:"project__image",image:R(image),alt:project,objectFit:"fill"})));};/* harmony default export */ const components_Project = (Project);
 ;// CONCATENATED MODULE: ./src/components/sections/Projects.js
-const Projects=()=>{const query=(0,gatsby_browser_entry.useStaticQuery)("4270343538");const data=query;const{title}=data.markdownRemark.frontmatter;const projects=data.allMarkdownRemark.nodes;return/*#__PURE__*/index_js_default().createElement("section",{id:"projects",className:"projects"},/*#__PURE__*/index_js_default().createElement("h2",{className:"projects__header"},title),projects.map((item,index)=>/*#__PURE__*/index_js_default().createElement(components_Project,{key:index,project:item.frontmatter.project,html:item.html,stack:item.frontmatter.stack,image:item.frontmatter.thumb.childImageSharp.gatsbyImageData,githubLink:item.frontmatter.github_link,projectLink:item.frontmatter.project_link})));};/* harmony default export */ const sections_Projects = (Projects);
+//* original import
+// import { graphql, useStaticQuery } from "gatsby"
+//* original component
+// const Projects = () => {
+//   const query = useStaticQuery(
+//     graphql`
+//       query Projects {
+//         markdownRemark(fileAbsolutePath: { regex: "/projects.md/" }) {
+//           frontmatter {
+//             title
+//           }
+//         }
+//         allMarkdownRemark(
+//           sort: { fields: frontmatter___project, order: ASC }
+//           filter: { frontmatter: { slug: { eq: true } } }
+//         ) {
+//           nodes {
+//             html
+//             frontmatter {
+//               stack
+//               project
+//               github_link
+//               project_link
+//               thumb {
+//                 childImageSharp {
+//                   gatsbyImageData(
+//                     layout: CONSTRAINED
+//                     transformOptions: { fit: COVER }
+//                     width: 2000
+//                   )
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     `
+//   )
+//   const data = query
+//   const { title } = data.markdownRemark.frontmatter
+//   const projects = data.allMarkdownRemark.nodes
+//   return (
+//     <section id="projects" className="projects">
+//       <h2 className="projects__header">{title}</h2>
+//       {projects.map((item, index) => (
+//         <Project
+//           key={index}
+//           project={item.frontmatter.project}
+//           html={item.html}
+//           stack={item.frontmatter.stack}
+//           image={item.frontmatter.thumb.childImageSharp.gatsbyImageData}
+//           githubLink={item.frontmatter.github_link}
+//           projectLink={item.frontmatter.project_link}
+//         />
+//       ))}
+//     </section>
+//   )
+// }
+// export default Projects
+const Projects=()=>{return/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.StaticQuery,{query:"4270343538",render:data=>/*#__PURE__*/index_js_default().createElement("section",{id:"projects",className:"projects"},/*#__PURE__*/index_js_default().createElement("h2",{className:"projects__header"},data.markdownRemark.frontmatter.title),data.allMarkdownRemark.nodes.map((item,index)=>/*#__PURE__*/index_js_default().createElement(components_Project,{key:index,project:item.frontmatter.project,html:item.html,stack:item.frontmatter.stack,image:item.frontmatter.thumb.childImageSharp.gatsbyImageData,githubLink:item.frontmatter.github_link,projectLink:item.frontmatter.project_link})))});};/* harmony default export */ const sections_Projects = (Projects);
 ;// CONCATENATED MODULE: ./src/components/sections/Skills.js
-const Skills=()=>{const query=(0,gatsby_browser_entry.useStaticQuery)("548590010");const data=query;const{skills,title,title2}=data.markdownRemark.frontmatter;console.log(query);return/*#__PURE__*/index_js_default().createElement("section",{id:"skills",className:"skills"},/*#__PURE__*/index_js_default().createElement("h3",{className:"skills__heading"},title,/*#__PURE__*/index_js_default().createElement("span",{className:"skills__heading-two"},title2)),/*#__PURE__*/index_js_default().createElement("div",{className:"skills__grid"},skills.map((item,index)=>/*#__PURE__*/index_js_default().createElement("div",{className:"skills__item",key:index},/*#__PURE__*/index_js_default().createElement(Y,{className:"skills__item-icon",image:R(item.icon.childImageSharp.gatsbyImageData),alt:item.skill}),/*#__PURE__*/index_js_default().createElement("h4",{className:"skills__item-skill"},item.skill)))));};/* harmony default export */ const sections_Skills = (Skills);
+//* original import
+// import { graphql, useStaticQuery } from "gatsby"
+//* original component
+// const Skills = () => {
+//   const query = useStaticQuery(graphql`
+//     query Skills {
+//       markdownRemark(fileAbsolutePath: { regex: "/skills.md/" }) {
+//         frontmatter {
+//           title
+//           title2
+//           skills {
+//             skill
+//             icon {
+//               id
+//               childImageSharp {
+//                 gatsbyImageData(
+//                   placeholder: TRACED_SVG
+//                   layout: CONSTRAINED
+//                   transformOptions: { fit: COVER }
+//                   width: 200
+//                 )
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
+//   const data = query
+//   const { skills, title, title2 } = data.markdownRemark.frontmatter
+//   console.log(query)
+//   return (
+//     <section id="skills" className="skills">
+//       <h3 className="skills__heading">
+//         {title}
+//         <span className="skills__heading-two">{title2}</span>
+//       </h3>
+//       <div className="skills__grid">
+//         {skills.map((item, index) => (
+//           <div className="skills__item" key={index}>
+//             <GatsbyImage
+//               className="skills__item-icon"
+//               image={getImage(item.icon.childImageSharp.gatsbyImageData)}
+//               alt={item.skill}
+//             />
+//             <h4 className="skills__item-skill">{item.skill}</h4>
+//           </div>
+//         ))}
+//       </div>
+//     </section>
+//   )
+// }
+// export default Skills
+const Skills=()=>{return/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.StaticQuery,{query:"548590010",render:data=>/*#__PURE__*/index_js_default().createElement("section",{id:"skills",className:"skills"},/*#__PURE__*/index_js_default().createElement("h3",{className:"skills__heading"},data.markdownRemark.frontmatter.title,/*#__PURE__*/index_js_default().createElement("span",{className:"skills__heading-two"},data.markdownRemark.frontmatter.title2)),/*#__PURE__*/index_js_default().createElement("div",{className:"skills__grid"},data.markdownRemark.frontmatter.skills.map((item,index)=>/*#__PURE__*/index_js_default().createElement("div",{className:"skills__item",key:index},/*#__PURE__*/index_js_default().createElement(Y,{className:"skills__item-icon",image:R(item.icon.childImageSharp.gatsbyImageData),alt:item.skill}),/*#__PURE__*/index_js_default().createElement("h4",{className:"skills__item-skill"},item.skill)))))});};/* harmony default export */ const sections_Skills = (Skills);
 ;// CONCATENATED MODULE: ./src/pages/index.js
 const Home=()=>{return/*#__PURE__*/index_js_default().createElement(index_js_.Fragment,null,/*#__PURE__*/index_js_default().createElement(sections_Hero,null),/*#__PURE__*/index_js_default().createElement(sections_AboutMe,null),/*#__PURE__*/index_js_default().createElement(sections_Skills,null),/*#__PURE__*/index_js_default().createElement(sections_Projects,null),/*#__PURE__*/index_js_default().createElement(sections_Footer,null));};/* harmony default export */ const pages = (Home);
 
