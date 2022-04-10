@@ -38,7 +38,35 @@ var index_js_default = /*#__PURE__*/__webpack_require__.n(index_js_);
 // EXTERNAL MODULE: ./.cache/gatsby-browser-entry.js + 4 modules
 var gatsby_browser_entry = __webpack_require__(7533);
 ;// CONCATENATED MODULE: ./src/components/sections/AboutMe.js
-const AboutMe=()=>{const query=(0,gatsby_browser_entry.useStaticQuery)("1535203100");const data=query;const{title}=data.markdownRemark.frontmatter;const{html}=data.markdownRemark;return/*#__PURE__*/index_js_default().createElement("section",{id:"about-me",className:"about-me"},/*#__PURE__*/index_js_default().createElement("h2",{className:"about-me__header"},title),/*#__PURE__*/index_js_default().createElement("div",{className:"about-me__body",dangerouslySetInnerHTML:{__html:html}}));};/* harmony default export */ const sections_AboutMe = (AboutMe);
+//* original import
+// import { graphql, useStaticQuery } from "gatsby";
+//* original component
+// const AboutMe = () => {
+//   const query = useStaticQuery(graphql`
+//     query AboutMe {
+//       markdownRemark(fileAbsolutePath: { regex: "/about-me.md/" }) {
+//         html
+//         frontmatter {
+//           title
+//         }
+//       }
+//     }
+//   `);
+//   const data = query;
+//   const { title } = data.markdownRemark.frontmatter;
+//   const { html } = data.markdownRemark;
+//   return (
+//     <section id='about-me' className='about-me'>
+//       <h2 className='about-me__header'>{title}</h2>
+//       <div
+//         className='about-me__body'
+//         dangerouslySetInnerHTML={{ __html: html }}
+//       />
+//     </section>
+//   );
+// };
+// export default AboutMe;
+const AboutMe=()=>{return/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.StaticQuery,{query:"1535203100",render:data=>/*#__PURE__*/index_js_default().createElement("section",{id:"about-me",className:"about-me"},/*#__PURE__*/index_js_default().createElement("h2",{className:"about-me__header"},data.markdownRemark.frontmatter.title),/*#__PURE__*/index_js_default().createElement("div",{className:"about-me__body",dangerouslySetInnerHTML:{__html:data.markdownRemark.html}}))});};/* harmony default export */ const sections_AboutMe = (AboutMe);
 // EXTERNAL MODULE: ./node_modules/common-tags/es/index.js + 41 modules
 var es = __webpack_require__(5863);
 // EXTERNAL MODULE: ./node_modules/gatsby-plugin-image/node_modules/camelcase/index.js
