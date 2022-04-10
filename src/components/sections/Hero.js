@@ -108,17 +108,17 @@ const Hero = () => {
 
   const renderNav = () => {
     return (
-      <div className='hero__nav'>
+      <ul className='hero__nav'>
         <Link onClick={closeMenu} className='hero__nav-link' to='#about-me'>
-          About
+          <li>About</li>
         </Link>
         <Link onClick={closeMenu} className='hero__nav-link' to='#projects'>
-          Projects
+          <li>Projects</li>
         </Link>
         <Link onClick={closeMenu} className='hero__nav-link' to='#footer'>
-          Contact
+          <li>Contact</li>
         </Link>
-      </div>
+      </ul>
     );
   };
 

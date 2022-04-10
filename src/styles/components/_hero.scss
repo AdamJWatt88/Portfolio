@@ -40,6 +40,7 @@
       @include fontXLBold40($font-color-primary);
       text-decoration: none;
       transition: all 0.3s;
+      list-style: none;
 
       //900px
       @include respond(tab-port) {
