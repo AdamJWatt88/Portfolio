@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { Fragment, useRef } from "react";
 import { Link } from "gatsby";
 
 import HamMenu from "./HamMenu";
@@ -36,7 +36,7 @@ const Menu = () => {
   };
 
   return (
-    <div className='mobile-nav'>
+    <Fragment>
       <HamMenu ref={ref} onClick={openMenu} />
       <Modal ref={modalRef}>
         <HamMenu ref={ref2} onClick={closeMenu} />
@@ -65,7 +65,7 @@ const Menu = () => {
           </nav>
         </aside>
       </Modal>
-    </div>
+    </Fragment>
   );
 };
 

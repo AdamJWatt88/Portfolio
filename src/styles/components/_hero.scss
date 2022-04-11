@@ -1,17 +1,15 @@
 .hero {
-  position: relative;
+  display: grid;
+  grid-template-columns: $padding-desktop 1fr $padding-desktop;
+  grid-template-rows: .2fr 1fr .2fr;
   height: 100vh;
   background-color: $bg-color-primary;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include paddingLeftRight($padding-desktop);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
   margin-bottom: $section-margin-bottom-large;
 
   //1200px
   @include respond(tab-land) {
-    @include paddingLeftRight($padding-tab-land);
+    grid-template-columns: $padding-tab-land 1fr $padding-tab-land;
   }
 
   //900px
@@ -21,14 +19,13 @@
 
   //600px
   @include respond(phone) {
-    @include paddingLeftRight($padding-phone);
+    grid-template-columns: $padding-phone 1fr $padding-phone; 
   }
 
   &__nav {
     display: flex;
-    position: absolute;
-    top: toRem(45);
-    right: toRem(45);
+    grid-column: 2 / span 3;
+    margin: toRem(45) toRem(45) 0px auto;
 
     // 600px
     @include respond(phone) {
@@ -78,6 +75,8 @@
     border-radius: 100%;
     background-color: $bg-color-tertiary;
     margin-right: 6.3%;
+    grid-column: 2;
+    grid-row: 2;
 
     //1200px
     @include respond(tab-land) {
@@ -92,6 +91,12 @@
   }
 
   &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 2;
+
     //900px
     @include respond(tab-port) {
       display: flex;
@@ -99,10 +104,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-top: toRem(25);
     }
   }
 
-  &__content > :not(:last-child) {
+  &__body > :not(:last-child) {
     margin-bottom: toRem(30);
   }
 

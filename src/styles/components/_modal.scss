@@ -10,6 +10,9 @@
 }
 
 .modal-container {
+  display: grid;
+  grid-template-columns: $padding-tab-land 1fr $padding-tab-land;
+  grid-template-rows: .1fr 1fr .2fr;
   position: absolute;
   top: 0;
   bottom: 0;
