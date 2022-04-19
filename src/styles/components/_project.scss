@@ -142,7 +142,35 @@
   }
 
   &__link:not(:last-child) {
-    margin-right: toRem(5);
+    margin-right: toRem(10);
+  }
+
+  &__link {
+    position: relative;
+    transform: translateY(0);
+    transition: all .2s;
+  }
+
+  &__link:hover {
+    transform: translateY(-3%);
+  }
+
+  &__link:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: $bg-color-secondary, $alpha: .5); 
+    height: 100%;
+    width: 100%;
+    border-radius: $border-radius-small $border-radius-small 0px 0px;
+    transition: all .2s;
+    transform: scaleY(0);
+    transform-origin: 0% 100%;
+  }
+
+  &__link:hover::after {
+    transform: scaleY(1);
   }
 
   &__image,
@@ -172,7 +200,7 @@
     content: "";
     position: absolute;
     display: block;
-    background-color: $bg-color-primary;
+    background-color: $bg-color-tertiary;
     height: 100%;
     width: 100%;
     z-index: 50;

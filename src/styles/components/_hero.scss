@@ -34,7 +34,7 @@
     }
 
     &-link {
-      @include fontXLBold40($font-color-primary);
+      @include fontMediumBold24($font-color-primary);
       text-decoration: none;
       transition: all 0.3s;
       list-style: none;
@@ -109,16 +109,19 @@
   }
 
   &__body > :not(:last-child) {
-    margin-bottom: toRem(30);
+    line-height: toRem(60);
   }
 
   &__description,
   &__header {
-    @include fontLargeBold32($font-color-primary);
     font-size: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+    background: -webkit-linear-gradient(45deg, $font-color-primary 50%, $font-color-secondary 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
 
   &__author {
     @include fontXLBold40($font-color-primary);
+    font-size: clamp(2.5rem, 2.0833rem + 1.8519vw, 3.75rem);
   }
 }

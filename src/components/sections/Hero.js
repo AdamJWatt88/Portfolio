@@ -65,7 +65,7 @@ const Hero = () => {
           <div className='hero__content'>
             <StaticImage
               className='hero__avatar'
-              src='../../images/avatar/avatar.svg'
+              src='../../images/avatar/avatar.png'
               alt='avatar'
               placeholder='blurred'
               layout='constrained'
