@@ -63,15 +63,16 @@ const Hero = () => {
         <header className='hero'>
           {isBrowser() && isDesktop ? renderNav() : <Menu />}
           <div className='hero__content'>
-            <StaticImage
-              className='hero__avatar'
-              src='../../images/avatar/avatar.png'
-              alt='avatar'
-              placeholder='blurred'
-              layout='constrained'
-              width={300}
-              height={300}
-            />
+            <div className='hero__avatar'>
+              <StaticImage
+                src='../../images/avatar/avatar.png'
+                alt='avatar'
+                placeholder='blurred'
+                layout='constrained'
+                width={300}
+                height={300}
+              />
+            </div>
             <div className='hero__body'>
               <h1 className='hero__header'>{data.site.siteMetadata.title}</h1>
               <h2 className='hero__author'>{data.site.siteMetadata.author}</h2>

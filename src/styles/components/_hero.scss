@@ -88,6 +88,11 @@
       margin-right: 0px;
       margin-bottom: toRem(15);
     }
+
+    & img {
+      border-radius: 100%;
+    }
+
   }
 
   &__content {
