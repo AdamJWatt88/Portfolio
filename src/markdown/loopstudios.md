@@ -7,4 +7,4 @@ project-link: https://loopstudios54.netlify.app/
 slug: true
 ---
 
-This landing page was created using Bootstrap 5.
+This landing page was created using Bootstrap 5. Design provided by frontendmentor.io.
