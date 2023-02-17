@@ -3,7 +3,7 @@ project: Invoice App
 thumb: "../images/thumbs/invoice-app-thumb.png"
 stack: ["MongoDB", "React", "SASS"]
 github-link: https://github.com/AdamJWatt88/Invoice-app
-project-link: https://invoice-app-88.herokuapp.com/
+project-link: https://icy-frost-6457.fly.dev/
 slug: true
 ---
 
