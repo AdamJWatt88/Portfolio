@@ -1,3 +1,5 @@
+const { sizes } = require("gatsby-plugin-sharp");
+
 module.exports = {
   plugins: [
     `gatsby-plugin-image`,
@@ -28,28 +30,17 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-portal`,
+      resolve: "gatsby-plugin-react-svg",
       options: {
-        key: "portal",
-        id: "portal",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
-        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-        mergeSecurityHeaders: true, // boolean to turn off the default security headers
-        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
-        mergeCachingHeaders: true, // boolean to turn off the default caching headers
-        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
+        rule: {
+          include: /images/,
+        },
       },
     },
   ],
   siteMetadata: {
     title: "Hello, my name is",
     author: "Adam Watt",
-    description: "I enjoy developing sites and apps for the web.",
+    description: "I create content for the web.",
   },
 };

@@ -32,16 +32,22 @@ const Hero = () => {
 
   const renderNav = () => {
     return (
-      <ul className='hero__nav'>
-        <Link onClick={closeMenu} className='hero__nav-link' to='#about-me'>
-          <li>About</li>
-        </Link>
-        <Link onClick={closeMenu} className='hero__nav-link' to='#projects'>
-          <li>Projects</li>
-        </Link>
-        <Link onClick={closeMenu} className='hero__nav-link' to='#footer'>
-          <li>Contact</li>
-        </Link>
+      <ul className='hero__nav container'>
+        <li className='hero__nav-link'>
+          <Link onClick={closeMenu} to='#about-me'>
+            About
+          </Link>
+        </li>
+        <li className='hero__nav-link'>
+          <Link onClick={closeMenu} to='#projects'>
+            Projects
+          </Link>
+        </li>
+        <li className='hero__nav-link'>
+          <Link onClick={closeMenu} to='#footer'>
+            Contact
+          </Link>
+        </li>
       </ul>
     );
   };
@@ -61,24 +67,28 @@ const Hero = () => {
       `}
       render={(data) => (
         <header className='hero'>
-          {isBrowser() && isDesktop ? renderNav() : <Menu />}
-          <div className='hero__content'>
-            <div className='hero__avatar'>
-              <StaticImage
-                src='../../images/avatar/avatar.png'
-                alt='avatar'
-                placeholder='blurred'
-                layout='constrained'
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className='hero__body'>
-              <h1 className='hero__header'>{data.site.siteMetadata.title}</h1>
-              <h2 className='hero__author'>{data.site.siteMetadata.author}</h2>
-              <p className='hero__description'>
-                {data.site.siteMetadata.description}
-              </p>
+          <div className='hero__grid'>
+            {isBrowser() && isDesktop ? renderNav() : <Menu />}
+            <div className='hero__content container'>
+              <div className='hero__avatar'>
+                <StaticImage
+                  src='../../images/avatar/avatar.png'
+                  alt='avatar'
+                  placeholder='blurred'
+                  layout='constrained'
+                  width={200}
+                  height={200}
+                />
+              </div>
+              <div className='hero__body'>
+                <p className='hero__header'>{data.site.siteMetadata.title}</p>
+                <h1 className='hero__author'>
+                  {data.site.siteMetadata.author}
+                </h1>
+                <p className='hero__description'>
+                  {data.site.siteMetadata.description}
+                </p>
+              </div>
             </div>
           </div>
         </header>

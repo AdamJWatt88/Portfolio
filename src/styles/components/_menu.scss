@@ -1,7 +1,12 @@
 .mobile-nav {
 
   &__link {
+    color: $font-color-primary;
     text-decoration: none;
+
+    &:hover {
+      color: $font-color-secondary;
+    }
   }
 
   &__sidebar {
@@ -25,15 +30,11 @@
       font-size: toRem(32);
       color: $font-color-primary;
       list-style: none;
-      margin-bottom: $margin-bottom-small;
+      margin-bottom: $margin-bottom-s;
       border: solid 5px $bg-color-tertiary;
       border-radius: $border-radius-small;
       padding: toRem(10);
       transition: all 0.3s;
-    }
-
-    & li:hover {
-      color: $font-color-secondary;
     }
   }
 }

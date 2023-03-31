@@ -1,67 +1,52 @@
 .about-me {
   display: flex;
   flex-direction: row;
+  background-color: rgba(0, 0, 0, 5%);
+  box-shadow: -8px 10px 5px rgb(0 0 0 / 10%);
+  padding: $padding-desktop;
+  border-radius: $border-radius-large;
   margin-bottom: $section-margin-bottom-large;
-  @include paddingLeftRight($padding-desktop);
 
   // 1200px
   @include respond(tab-land) {
-    @include paddingLeftRight($padding-tab-land);    
+    padding: $padding-tab-land;
   }
 
   // 900px
   @include respond(tab-port) {
-    @include paddingLeftRight($padding-tab-port);
+    padding: $padding-tab-port;
     flex-direction: column;
     text-align: center;
   }
 
   // 600px
   @include respond(phone) {
-    @include paddingLeftRight($padding-phone);
+    padding: $padding-phone;
   }
 
   &__header {
-    align-self: center;
-    font-size: $font-size-clamp-heading-large;
-    text-align: right;
-    margin-right: toRem(50);
-    line-height: $font-size-clamp-heading-large;
-      @include headerShadow;
+    white-space: nowrap;
+    margin-right: toRem(32);
+    @include sectionHeader;
+    line-height: 100%;
 
     // 1200px
     @include respond(tab-land) {
-      margin-right: toRem(40);
+      margin-right: toRem(16);
     }
 
     // 900px
     @include respond(tab-port) {
       margin-right: 0px;
       text-align: center;
-      white-space: nowrap;
-      margin-bottom: $margin-bottom-small;
+      margin-bottom: $margin-bottom-s;
     }
   }
 
   &__body {
-    align-self: center;
-    color: #000;
-    //* font-size 40px - 24px
-    font-size: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
-    line-height: clamp(1.25rem, 0.8099rem + 1.8779vw, 2.5rem);
-    background-color: rgba(0, 0, 0, 5%);
-    box-shadow: -8px 10px 5px rgb(0 0 0 / 10%);
-    padding: toRem(50);
-    border-radius: $border-radius-large;
-
-    // 1200px
-    @include respond(tab-land) {
-      padding: toRem(40);
-    }
-
-    // 600px
-    @include respond(phone) {
-      padding: toRem(20);
-    }
+    color: $font-color-tertiary;
+    // font-size 16 - 24px
+    font-size: $font-size-clamp-s-l;
+    line-height: 150%;
   }
 }

@@ -6,16 +6,7 @@
   border-style: none;
   grid-row: 1;
   grid-column: 2 / span 3;
-
-  // 900px
-  @include respond(tab-port) {
-    margin: toRem(35) toRem(35) 0px auto;
-  }
-  
-  // 600px
-  @include respond(phone) {
-    margin: toRem(25) toRem(25) 0px auto;
-  }
+  margin-left: auto;
 
   & > *:not(:last-child) {
     margin-bottom: toRem(10);

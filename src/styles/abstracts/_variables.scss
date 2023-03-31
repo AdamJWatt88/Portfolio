@@ -1,51 +1,84 @@
-//* background colors
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=IBM+Plex+Mono:wght@700&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
+//* BACKGROUND COLORS
 $bg-color-primary: #22223b;
 $bg-color-secondary: #4a4e69;
 $bg-color-tertiary: #9a8c98;
 $bg-color-quaternary: #c9ada7;
-$bg-color-body: #f2e9e4;
+$bg-color-body: #F8F6F5;
 
-//* font colors
-$font-color-primary: #f2e9e4;
+//* FONT COLORS
+$font-color-primary: #F8F6F5;
 $font-color-secondary: #c9ada7;
 $font-color-tertiary: #22223b;
 
-//* border-radius
+//* BORDER RADIUS
 $border-radius-large: toRem(20);
 $border-radius-medium: toRem(10);
 $border-radius-small: toRem(5);
 
-//* font-family
-$font-family-primary: Courier New, monospace;
-$font-family-secondary:  monospace;
+//* FONT FAMILIES
+$font-family-primary: 'Manrope',
+sans-serif;
+$font-family-secondary: 'IBM Plex Mono',
+monospace;
 
-//* font-size
-// 150px - 50px
-$font-size-clamp-heading-large: clamp(3.1rem, 0.8817rem + 9.4648vw, 9.4rem);
-//125px - 40px
-$font-size-clamp-heading-medium: clamp(2.5rem, 0.6338rem + 7.9624vw, 7.8rem);
 
-//* line-height
+//* FONT SIZES
+$font-size-xs: toRem(13);
+$font-size-s: toRem(16);
+$font-size-m: toRem(20);
+$font-size-l: toRem(24);
+$font-size-xl: toRem(32);
+$font-size-xxl: toRem(48);
+$font-size-xxxl: toRem(64);
+$font-size-xxxxl: toRem(96);
+
+//* FONT SIZE CLAMPS HEADINGS
+// 64px - 96px
+$font-size-clamp-heading-large: clamp($font-size-xxxl, 0.8817rem + 9.4648vw, $font-size-xxxxl);
+// 48px - 64px
+$font-size-clamp-heading-medium: clamp($font-size-xxl, 2.7692rem + 1.0256vw, $font-size-xxxl);
+
+//* GENERAL FONT SIZE CLAMPS
+
+// 32px - 48px
+$font-size-clamp-xl-xxl: clamp(2rem, 1.7692307692307692rem + 1.0256410256410255vw, 3rem);
+// 24px - 32px
+$font-size-clamp-l-xl: clamp(1.5rem, 1.3846153846153846rem + 0.5128205128205128vw, 2rem);
+
+// 16px - 24px
+$font-size-clamp-s-l: clamp(1rem, 0.8846153846153846rem + 0.5128205128205128vw, 1.5rem);
+
+// 8px - 16px
+$font-size-clamp-xs-s: clamp(0.5rem, 0.3846153846153846rem + 0.5128205128205128vw, 1rem);
+
+//* LINE HEIGHT CLAMPS
 // 140px - 40px
 $line-height-clamp-heading-large: clamp(2.5rem, 0.2993rem + 9.3897vw, 8.75rem);
 // 115px - 40px
 $line-height-clamp-heading-medium: clamp(1.9rem, 0.0408rem + 7.9324vw, 7.18rem);
 
-//* section-margin-bottom
-$section-margin-bottom-large: toRem(300);
-$section-margin-bottom-medium: toRem(60);
-$section-margin-bottom-small: toRem(30);
+// TODO
+// go through all the sections and try messing with adding these margins. they dont seem to be properly added at all screen sizes
+//* SECTION MARGIN BOTTOM
+$section-margin-bottom-large: toRem(128);
+$section-margin-bottom-medium: toRem(64);
+$section-margin-bottom-small: toRem(32);
 
-//* margin-bottom
-$margin-bottom-large: toRem(100);
-$margin-bottom-medium: toRem(50);
-$margin-bottom-small: toRem(25);
+//* MARGIN BOTTOM
+$margin-bottom-xxl: toRem(128);
+$margin-bottom-xl: toRem(64);
+$margin-bottom-l: toRem(48);
+$margin-bottom-m: toRem(32);
+$margin-bottom-s: toRem(16);
 
-//* padding
-$padding-desktop: toRem(150);
+//* PADDDING
+$padding-desktop: toRem(64);
 // 1200px
-$padding-tab-land: toRem(100);
+$padding-tab-land: toRem(48);
 // 900px
-$padding-tab-port: toRem(75);
+$padding-tab-port: toRem(32);
 //600px
-$padding-phone: toRem(25);
+$padding-phone: toRem(16);

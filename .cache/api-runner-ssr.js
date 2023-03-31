@@ -3,9 +3,9 @@ var plugins = [{
       plugin: require('/Users/adamwatt/Desktop/JavaScriptProjects/Portfolio/Portfolio-Project/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
-      name: 'gatsby-plugin-portal',
-      plugin: require('/Users/adamwatt/Desktop/JavaScriptProjects/Portfolio/Portfolio-Project/node_modules/gatsby-plugin-portal/gatsby-ssr.js'),
-      options: {"plugins":[],"key":"portal","id":"portal"},
+      name: 'partytown',
+      plugin: require('/Users/adamwatt/Desktop/JavaScriptProjects/Portfolio/Portfolio-Project/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),
+      options: {"plugins":[]},
     }]
 /* global plugins */
 // During bootstrap, we write requires at top of this file which looks like:

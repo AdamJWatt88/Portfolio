@@ -1,5 +1,5 @@
 ---
-title: Contact Me
+title: Contact
 email: adamjwatt88@gmail.com
 link: Frontend Mentor
 link2: Github

@@ -1,6 +1,5 @@
 ---
-title: Technology
-title2: Experience
+title: Technology Experience
 skills:
   [
     { icon: "../images/icons/html.png", skill: "HTML" },
