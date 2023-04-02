@@ -7,4 +7,4 @@ project-link: https://icy-frost-6457.fly.dev/
 slug: true
 ---
 
-A fullstack application to keep track of your invoices. Design provided by frontendmentor.io.
+I created a full-stack invoicing app using React and MongoDB, enabling easy invoice creation and management. With MongoDB integration, I ensured seamless data management and retrieval. The app showcases my proficiency in both front-end and back-end development.

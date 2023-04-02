@@ -7,4 +7,4 @@ project-link: https://coffee-roasters-drab.vercel.app/
 slug: true
 ---
 
-A three page subscription site with an interactive ordering page. Design provided by frontendmentor.io.
+I built a React-based store front for a mock coffee shop, ensuring pixel-perfect accuracy while recreating a provided design. The resulting design includes user-friendly features such as product browsing, ordering, and checkout. With a responsive layout, the project showcases my front-end skills in delivering high-quality solutions.
