@@ -35,6 +35,11 @@
   padding-right: $padding;
 }
 
+// BOX-SHADOW
+@mixin boxShadow($color) {
+  box-shadow: -10px 10px 5px $color;
+}
+
 //* MEDIA QUERIES
 @mixin respond($breakpoint) {
 

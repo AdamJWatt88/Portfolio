@@ -5,7 +5,7 @@
   grid-template-rows: $padding-desktop, repeat(4, 25%), $padding-desktop;
   gap: toRem(16);
   background-color: $bg-color-quaternary;
-  box-shadow: -8px 10px 5px rgb(0 0 0 / 10%);
+  @include boxShadow($box-shadow-color-primary);
   border-radius: $border-radius-large;
 
   @include respond(tab-land) {

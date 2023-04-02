@@ -50,7 +50,7 @@
     position: relative;
     padding: $padding-desktop;
     border-radius: $border-radius-small;
-    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+    @include boxShadow($box-shadow-color-primary);
     background-image: linear-gradient(45deg,
         rgba(201, 173, 167, 0.2),
         rgba(242, 233, 228, 0.5));

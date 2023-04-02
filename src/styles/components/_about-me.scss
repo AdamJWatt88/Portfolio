@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   background-color: rgba(0, 0, 0, 5%);
-  box-shadow: -8px 10px 5px rgb(0 0 0 / 10%);
+  @include boxShadow($box-shadow-color-primary);
   padding: $padding-desktop;
   border-radius: $border-radius-large;
   margin-bottom: $section-margin-bottom-large;
