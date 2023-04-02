@@ -97,14 +97,14 @@
 
     // 600px
     @include respond(phone) {
-      height: toRem(150);
-      width: toRem(150);
+      // height: toRem(150);
+      // width: toRem(150);
     }
 
     // 375px
     @include respond(phone-small) {
-      height: toRem(125);
-      width: toRem(125);
+      // height: toRem(125);
+      // width: toRem(125);
     }
 
     & img {

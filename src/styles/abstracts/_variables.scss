@@ -60,8 +60,6 @@ $line-height-clamp-heading-large: clamp(2.5rem, 0.2993rem + 9.3897vw, 8.75rem);
 // 115px - 40px
 $line-height-clamp-heading-medium: clamp(1.9rem, 0.0408rem + 7.9324vw, 7.18rem);
 
-// TODO
-// go through all the sections and try messing with adding these margins. they dont seem to be properly added at all screen sizes
 //* SECTION MARGIN BOTTOM
 $section-margin-bottom-large: toRem(128);
 $section-margin-bottom-medium: toRem(64);

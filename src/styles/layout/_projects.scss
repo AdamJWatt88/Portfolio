@@ -1,26 +1,24 @@
 .projects {
-    // TODO
-    // fix all of these sectional marging bottoms for each section not just this one
-    margin-bottom: $section-margin-bottom-large;
-  
-    &__header {
-      @include sectionHeader;
-      text-align: center;
-      margin-bottom: $margin-bottom-xl;
+  margin-bottom: $section-margin-bottom-large;
 
-      // 1200px
-      @include respond (tab-land) {
-        margin-bottom: $margin-bottom-l;
-      }
+  &__header {
+    @include sectionHeader;
+    text-align: center;
+    margin-bottom: $margin-bottom-xl;
 
-      // 900px
-      @include respond (tab-port) {
-        margin-bottom: $margin-bottom-m;
-      }
+    // 1200px
+    @include respond (tab-land) {
+      margin-bottom: $margin-bottom-l;
+    }
 
-      // 600px
-      @include respond (phone) {
-        margin-bottom: $margin-bottom-s;
-      }
+    // 900px
+    @include respond (tab-port) {
+      margin-bottom: $margin-bottom-m;
+    }
+
+    // 600px
+    @include respond (phone) {
+      margin-bottom: $margin-bottom-s;
     }
   }
+}

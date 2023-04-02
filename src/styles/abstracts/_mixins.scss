@@ -23,36 +23,10 @@
   font-size: $font-size-clamp-xl-xxl;
 }
 
-// TODO
-// go through these font sizings and see if they are needed
 //* FONT SIZING  
-@mixin fontLargeBold32($color) {
-  font-family: $font-family-secondary;
-  color: $color;
-  font-size: toRem(32);
-  font-weight: bold;
-}
-
-@mixin fontMediumBold24($color) {
-  color: $color;
-  font-size: toRem(24);
-  font-weight: bold;
-}
-
 @mixin fontMedium24($color) {
   color: $color;
   font-size: toRem(24);
-}
-
-@mixin fontSmallBold16($color) {
-  color: $color;
-  font-size: toRem(16);
-  font-weight: bold;
-}
-
-@mixin fontSmall16($color) {
-  color: $color;
-  font-size: toRem(16);
 }
 
 //* PADDING
