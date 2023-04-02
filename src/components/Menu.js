@@ -13,9 +13,9 @@ const Menu = () => {
   const modalRef = useRef();
 
   const openMenu = () => {
+    modalRef.current.openModal();
     isBrowser() && document.querySelector("body").classList.add("modal-open");
     ref.current.classList.add("ham-menu--close");
-    modalRef.current.openModal();
     let attr = JSON.parse(ref.current.getAttribute("aria-expanded"));
     ref.current.setAttribute("aria-expanded", !attr);
 

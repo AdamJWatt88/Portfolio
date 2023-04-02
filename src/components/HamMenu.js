@@ -7,7 +7,6 @@ const HamMenu = forwardRef(({ onClick }, ref) => {
       onClick={onClick}
       className='ham-menu'
       id='ham-menu'
-      class='ham-menu'
       aria-label='Menu'
       aria-controls='menu'
       aria-expanded='false'>

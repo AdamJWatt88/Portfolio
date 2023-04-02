@@ -1,6 +1,8 @@
+// TODO: Fix the image links for mobile. They're not opening on mobile.
+
 .project {
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   padding: $padding-desktop;
   grid-template-rows: $padding-desktop, repeat(4, 25%), $padding-desktop;
   gap: toRem(16);
@@ -34,9 +36,7 @@
     grid-row: 2;
 
     // 900px
-    @include respond(tab-port) {
-      
-    }
+    @include respond(tab-port) {}
 
     // 600px
     @include respond(phone) {
@@ -62,12 +62,12 @@
     border-radius: $border-radius-small;
     text-decoration: none;
     transition: opacity .3s;
-    grid-column: 1 / span 7;    
+    grid-column: 1 / span 7;
     grid-row: 3;
 
     // 1200px
     @include respond(tab-land) {
-      grid-column: 1 / span 8;    
+      grid-column: 1 / span 8;
       padding: toRem(8);
     }
 
@@ -86,12 +86,13 @@
 
     // 600px
     @include respond(phone) {
-      grid-column: 1 / 7;  
+      grid-column: 1 / 7;
       grid-row: 2 / span 3;
     }
   }
 
   &__body:hover {
+
     // 900px
     @include respond(tab-port) {
       opacity: 0;
@@ -170,7 +171,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba($color: $bg-color-secondary, $alpha: .5); 
+    background-color: rgba($color: $bg-color-secondary, $alpha: .5);
     height: 100%;
     width: 100%;
     border-radius: $border-radius-small $border-radius-small 0px 0px;
@@ -193,18 +194,16 @@
     width: 100%;
 
     // 900px
-    @include respond(tab-port) {
-      
-    }
+    @include respond(tab-port) {}
 
     // 600px
     @include respond(phone) {
-      grid-column: 1 / 7;  
+      grid-column: 1 / 7;
       grid-row: 2 / span 3;
     }
   }
 
-  &__image:hover::before {
+  &__image:hover:active::before {
     opacity: 0;
   }
 
