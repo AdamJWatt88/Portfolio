@@ -60,8 +60,8 @@ const Menu = () => {
     <div className='hero__nav container'>
       <HamMenu ref={ref} onClick={openMenu} />
       <Modal ref={modalRef}>
-        <HamMenu ref={ref2} onClick={closeMenu} />
         <aside ref={ref3} className='mobile-nav__sidebar'>
+          <HamMenu ref={ref2} onClick={closeMenu} />
           <nav>
             <ul>
               <li>

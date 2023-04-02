@@ -1,34 +1,21 @@
 .ham-menu {
-  width: toRem(50);
+  height: toRem(30);
+  width: toRem(30);
   cursor: pointer;
   z-index: 1000;
   background: transparent;
   border-style: none;
-  grid-row: 1;
-  grid-column: 2 / span 3;
   margin-left: auto;
 
-  & > *:not(:last-child) {
-    margin-bottom: toRem(10);
+  &>*:not(:last-child) {
+    margin-bottom: toRem(8);
   }
 
   &--close {
-    grid-row: 1;
-    grid-column: 2 / span 3;
-
-    // 900px
-    @include respond(tab-port) {
-      margin: toRem(35) toRem(35) 0px auto;
-    }
-
-    // 600px
-    @include respond(phone) {
-      margin: toRem(25) toRem(25) 0px auto;
-    }
-    
+    margin-bottom: $margin-bottom-m;
 
     & :nth-child(1) {
-      transform: rotate(45deg) translate(10px, 10px);
+      transform: rotate(45deg) translate(6px, 6px);
     }
 
     & :nth-child(2) {
@@ -36,20 +23,20 @@
     }
 
     & :nth-child(3) {
-      transform: rotate(-45deg) translate(10px, -10px);
+      transform: rotate(-45deg) translate(8px, -8px);
     }
   }
 
   &__bar {
     border-radius: $border-radius-large;
     width: 100%;
-    height: toRem(5);
+    height: toRem(2);
     background-color: $font-color-primary;
     transition: all 0.3s;
     opacity: 1;
   }
 
-  &:hover > &__bar {
+  &:hover>&__bar {
     background-color: $font-color-secondary;
   }
 }

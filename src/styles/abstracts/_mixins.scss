@@ -99,3 +99,8 @@
     }
   }
 }
+
+// TESTING BORDER BOX MODEL
+@mixin testBorderBox($color) {
+  border: 5px solid $color;
+}
